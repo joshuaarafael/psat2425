@@ -80,10 +80,11 @@ $ ./otomatis.sh
 ```
 
 2. menggunakan UserData pada EC2
-Masuk ke AWS Console > EC2.
-Klik Launch Instance.
-Isi:
-Name: TugasEC2
+```.env
+- Masuk ke AWS Console > EC2.
+- Klik Launch Instance.
+- Isi:
+- Name: TugasEC2
 AMI: Ubuntu Server 22.04
 Instance type: t2.micro
 Key pair: Pilih vockey
@@ -93,6 +94,7 @@ Buka port 80 (HTTP)
 Buka port 443 (HTTPS)
 Advence Details lalu scroll sampai menemukan UserData
 Isi UserData sebagai berikut:
+```
 ```.env
 #!/bin/bash
 echo '#!/bin/bash
