@@ -85,15 +85,15 @@ $ ./otomatis.sh
 - Klik Launch Instance.
 - Isi:
 - Name: TugasEC2
-AMI: Ubuntu Server 22.04
-Instance type: t2.micro
-Key pair: Pilih vockey
-Security Group:
+- AMI: Ubuntu Server 22.04
+- Instance type: t2.micro
+- Key pair: Pilih vockey
+- Security Group:
 Buka port 22 (SSH)
 Buka port 80 (HTTP)
 Buka port 443 (HTTPS)
-Advence Details lalu scroll sampai menemukan UserData
-Isi UserData sebagai berikut:
+- Advence Details lalu scroll sampai menemukan UserData
+- Isi UserData sebagai berikut:
 ```
 ```.env
 #!/bin/bash
@@ -119,6 +119,8 @@ chmod +x /home/ubuntu/otomatis.sh
 ```.env
 $ ./otomatis.sh
 ```
+### memang terlihat sama saja namun cara yang ke-2 lebih menghemat waktu karena kita tinggal menambahkan UserData saat menginstal EC2 lalu tinggal mengetikkan " ./ otomatis.sh " maka kode yang ada didalam UserData akan langsung serentak dijalankan.
+
 #
 
 ## 2. Jalankan 
