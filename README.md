@@ -59,12 +59,12 @@ atau bisa dibuat menjadi shell script, misal diberi nama otomatis.sh
 sudo apt update -y
 sudo apt install -y apache2 php php-mysql libapache2-mod-php mysql-client
 sudo rm -rf /var/www/html/{*,.*}
-sudo git clone https://github.com/paknux/crudsiswa.git /var/www/html
+sudo git clone https://github.com/[github mu] /var/www/html
 sudo chmod -R 777 /var/www/html
-echo DB_USER=admin > /var/www/html/.env
-echo DB_PASS=P4ssw0rd123  >> /var/www/html/.env
+echo DB_USER=[username rds] > /var/www/html/.env
+echo DB_PASS=[password rds]  >> /var/www/html/.env
 echo DB_NAME=crudsiswa  >> /var/www/html/.env
-echo DB_HOST=rds11tjkt1.czt6n8ylfvyb.us-east-1.rds.amazonaws.com >> /var/www/html/.env
+echo DB_HOST=[endpoint rds] >> /var/www/html/.env
 sudo apt install openssl
 sudo a2enmod ssl
 sudo a2ensite default-ssl.conf
@@ -101,12 +101,12 @@ echo '#!/bin/bash
 sudo apt update -y
 sudo apt install -y apache2 php php-mysql libapache2-mod-php mysql-client
 sudo rm -rf /var/www/html/{,.}
-sudo git clone https://github.com/joshuaarafael/psat2425.git /var/www/html
+sudo git clone https://github.com/[github mu] /var/www/html
 sudo chmod -R 777 /var/www/html
-echo DB_USER=admin > /var/www/html/.env
-echo DB_PASS=joshuaRAFAEL82472  >> /var/www/html/.env
+echo DB_USER=[username rds] > /var/www/html/.env
+echo DB_PASS=[password rds]  >> /var/www/html/.env
 echo DB_NAME=crudsiswa  >> /var/www/html/.env
-echo DB_HOST=psat2425-16.culvipwxmiuk.us-east-1.rds.amazonaws.com >> /var/www/html/.env
+echo DB_HOST=[endpoint rds] >> /var/www/html/.env
 sudo apt install -y openssl
 sudo a2enmod ssl
 sudo a2ensite default-ssl.conf
@@ -132,7 +132,7 @@ Jalankan dengan username dan password default berikut ini
 
 Kemudian inputkanlah data sesuai dengan datamu
 
-### Catatan tambahan
+# Catatan tambahan
 1. Cara membuat Security Group
 ```.env
 - Cari VPC pada kolom pencarian
