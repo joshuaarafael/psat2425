@@ -131,3 +131,36 @@ Jalankan dengan username dan password default berikut ini
 #
 
 Kemudian inputkanlah data sesuai dengan datamu
+
+### Catatan tambahan
+1. Cara membuat Security Group
+```.env
+- Cari VPC pada kolom pencarian
+- Cari Security Groups
+- Create Security Group
+- Lalu ikuti langkah dibawah ini:
+```
+```.env
+1. Buat security group SG-ServerDB
+   allow inbound  MySQL (3306) from anywhereIPv4 (0.0.0.0/0)  
+
+2. Buat security group SG-ServerWeb
+   allow inbound SSH (22) from anywhereIPv4 (0.0.0.0/0)  
+   allow inbound HTTP (80) from anywhereIPv4 (0.0.0.0/0)  
+   allow inbound HTTPS (443) from anywhereIPv4 (0.0.0.0/0)  
+```
+
+2. Cara membuat RDS
+```.env
+- Cari Aurora and RDS
+- Create Database
+   Engine Type : pilih MySQL
+   Templates : Free tier
+   DB cluster identifier : (nama bebas misal : serverdb)
+   Master Username : (biarkan admin)
+   Master Password : isi misal P4ssw0rd
+   Public access : No 
+   Untuk Security group pastikan buat/pilih yang accept port inbound 3306 dari 0.0.0.0/0 (SG-ServerDB)
+- Klik Create Database
+- Tunggu sampai EndPoint muncul, bisa dicek dengan klik RDS yang kita buat lalu cari endpoint & port
+```
